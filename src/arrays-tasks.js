@@ -38,10 +38,10 @@ function getIntervalArray(start, end) {
  *    sumArrays([-1, 0, 1], [1, 2, 3, 4]) => [0, 2, 4, 4]
  */
 function sumArrays(arr1, arr2) {
-  const maxLength = Math.max(arr1.length, arr2.length);
+  const maxLength = Math.max(arr1.length, arr2.length); // Макс длина массива.
   return Array.from(
-    { length: maxLength },
-    (_, i) => (arr1[i] || 0) + (arr2[i] || 0)
+    { length: maxLength }, // новый массив с максимальной длинной
+    (_, i) => (arr1[i] || 0) + (arr2[i] || 0) // сумма индексов или 0 если индекс отсутствует
   );
 }
 
