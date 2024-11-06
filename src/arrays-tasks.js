@@ -142,8 +142,12 @@ function getAverage(arr) {
  *    isSameLength(['orange', 'banana', 'cherry']) => true
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-function isSameLength(/* arr */) {
-  throw new Error('Not implemented');
+function isSameLength(arr) {
+  if (arr.length === 0) {
+    return true;
+  }
+  const { length } = arr[0]; // I assign the length of the first element as an example and if != the length of the example then falls
+  return arr.every((str) => str.length === length);
 }
 
 /**
